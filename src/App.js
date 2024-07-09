@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,7 +8,7 @@ import {
 } from 'react-router-dom';
 import About from "./About";
 import Home from "./Home";
-import Header from "../src/components/Header";
+import Header from "../src/components/global/header/Header";
 
 import Products from "./Products";
 import SingleProduct from "./SingleProduct";
@@ -16,18 +17,20 @@ import ErrorPage from "./ErrorPage";
 import ContactUs from "./ContactUs";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
-import Footer from "./components/Footer";
+import Footer from "./components/global/footer/Footer";
+import GoTotop from "./GoToTop/GoToTop";
+
 const App = () => {
   const theme = {
     colors:{
       heading: "rgb(24 24 29)",
       text: "rgba(29 ,29 ,29, .8)",
       white: "#fff",
-      black: "#212529",
+      black: "white",
       helper: "#8490ff",
        
       bg: "#F6F8FA",
-      footer_bg: "#0a1435",
+      footer_bg: "#b8976a",
       btn: "rgb(98 84 243)",
       border: "rgba(98, 84, 243, 0.5)",
       hr: "#ffffff",
@@ -43,6 +46,7 @@ const App = () => {
   };
   return <div>
     <ThemeProvider theme={theme}>
+      
     <Router>  
         <GlobalStyle/>
         <Header/>
@@ -57,6 +61,7 @@ const App = () => {
           
         </Routes>
         <Footer/>
+        <GoTotop/>
       </Router>  
       </ThemeProvider>
   </div>;

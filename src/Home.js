@@ -1,27 +1,21 @@
-import React from 'react'
-import styled from 'styled-components'
-import HeroSection from './components/HeroSection';
-import Services from './components/Services';
-import Trusted from './components/Trusted';
-import FeatureProducts from './components/FeatureProducts';
-function Home() {
-  const data ={
-    name: "Anjali Store",
-  }
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import Trusted from "./components/Trusted";
+import FeatureProduct from "./components/FeatureProducts";  
+
+const Home = () => {
+  const data = {
+    name: "thapa store",
+  };
+
   return (
-   <>
-   
-   <HeroSection myData={data}/>
-   <FeatureProducts/>
-   <Services/>
-   <Trusted/>
-   </>
-    
+    <>
+      <HeroSection myData={data} />
+       <FeatureProduct />
+      <Services />
+      <Trusted />
+    </>
   );
 };
-const Wrapper = styled.section`
-background-color: ${({theme}) => theme.colors.bg};
-height: 100vh;
-`;
 
-export default Home
+export default Home;

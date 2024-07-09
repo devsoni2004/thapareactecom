@@ -1,15 +1,32 @@
 import React from 'react'
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { Button } from "../styles/Button";
+import { Button } from "../../../styles/Button";
 import { FaFacebook, FaInstagram, FaEnvelopeOpenText } from "react-icons/fa";
+import { Grid } from '@mui/material';
 
 
 const Footer = () => {
   return (
-   <>
-   
-   <Wrapper>
+    <>
+
+      <Wrapper>
+        {/* <section className="contact-short">
+          <Grid >
+            <div className="grid grid-two-column">
+              <div>
+                <h3>Need Assistance? Contact our Customer Care..</h3>
+                <h3>Email-:creativeartistbyanjali@gmail.com </h3>
+              </div>
+
+              <div>
+                <Button className="btn hireme-btn">
+                  <NavLink to="/"> Request CallBack</NavLink>
+                </Button>
+              </div>
+            </div>
+          </Grid>
+        </section> */}
         <section className="contact-short">
           <div className="grid grid-two-column">
             <div>
@@ -19,7 +36,7 @@ const Footer = () => {
 
             <div>
               <Button className="btn hireme-btn">
-                <NavLink to="/"> Get Started </NavLink>
+                <NavLink to="/">Request CallBack</NavLink>
               </Button>
             </div>
           </div>
@@ -29,7 +46,7 @@ const Footer = () => {
         <footer>
           <div className="container grid grid-four-column">
             <div className="footer-about">
-              <h3>Thapa Technical</h3>
+              <h3>String Craft</h3>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
             </div>
             <div className="footer-subscribe">
@@ -60,7 +77,8 @@ const Footer = () => {
             </div>
             <div className="footer-contact">
               <h3>Call Us</h3>
-              <h3>+91 12345678978</h3>
+              {/* <a href='tel:12345678978'>+91 8440885765</a> */}
+              <h3>+91 8440885765</h3>
             </div>
           </div>
 
@@ -68,7 +86,7 @@ const Footer = () => {
             <hr />
             <div className="container grid grid-two-column ">
               <p>
-                @{new Date().getFullYear()} ThapaTechnical. All Rights Reserved
+                @{new Date().getFullYear()} WoodenCraft. All Rights Reserved
               </p>
               <div>
                 <p>PRIVACY POLICY</p>
@@ -78,7 +96,7 @@ const Footer = () => {
           </div>
         </footer>
       </Wrapper>
-   </>
+    </>
   );
 };
 
@@ -90,7 +108,8 @@ const Wrapper = styled.section`
     max-width: 60vw;
     margin: auto;
     padding: 5rem 10rem;
-    background-color: ${({ theme }) => theme.colors.bg};
+    background:#343131;
+    color: white;
     border-radius: 1rem;
     box-shadow: ${({ theme }) => theme.colors.shadowSupport};
     transform: translateY(50%);
@@ -150,6 +169,6 @@ const Wrapper = styled.section`
       padding-top: 4.8rem;
     }
   }
-`;  
+`;
 
 export default Footer

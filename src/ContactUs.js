@@ -37,8 +37,7 @@ const ContactUs = () => {
 
   <>
   <Wrapper>
-      <h2 className="common-heading">Contact page</h2>
-
+      {/* <h2 className="common-heading">Contact page</h2> */}
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.5890224085842!2d75.8046688!3d26.853021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5d0abb464cf%3A0x43440aa416c9fdaf!2sWorld%20Trade%20Park!5e0!3m2!1sen!2sin!4v1685464292816!5m2!1sen!2sin"
         width="100%"
